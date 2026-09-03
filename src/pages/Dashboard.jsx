@@ -1,4 +1,6 @@
+
 import { Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import StatCard from "../components/dashboard/StatCard";
 import SalesOverview from "../components/dashboard/SalesOverview";
@@ -6,6 +8,7 @@ import NeedsAttention from "../components/dashboard/NeedsAttention";
 import RecentSales from "../components/dashboard/RecentSales";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="space-y-6">
 
@@ -21,9 +24,10 @@ const Dashboard = () => {
           </p>
         </div>
 
-        <button className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2.5 rounded-lg transition">
-          <Plus size={19} />
-
+       <button
+  onClick={() => navigate("/sales/new")}
+  className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2.5 rounded-lg transition"
+>
           New Sale
         </button>
       </div>

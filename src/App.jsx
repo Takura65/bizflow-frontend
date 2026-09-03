@@ -10,6 +10,7 @@ import Customers from "./pages/Customers";
 import Payments from "./pages/Payments";
 import Expenses from "./pages/Expenses";
 import Analytics from "./pages/Analytics";
+import NewSale from "./pages/NewSale";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             path="/sales"
             element={<Sales />}
           />
-
+        <Route path="/sales/new" element={<NewSale />} />
           <Route
             path="/orders"
             element={<Orders />}
